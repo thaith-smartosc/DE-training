@@ -1,0 +1,4 @@
+google-cloud-bigquery
+pyarrow
+pandas
+google-cloud-bigquery-storage

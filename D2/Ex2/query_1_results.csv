@@ -1,0 +1,997 @@
+Brand,avg_price
+Galvan-Ortega,999.0
+Day-Noble,999.0
+Leonard LLC,999.0
+Ford-Mayer,998.0
+"Wilkerson, Christensen and Baxter",996.0
+Stanley and Sons,994.0
+"Mckay, Cooke and Heath",994.0
+Beard Group,994.0
+Bray-Cowan,993.0
+Avila Inc,993.0
+Hayes LLC,991.0
+"Dyer, Mcdowell and Holmes",991.0
+Webster-Delacruz,991.0
+Melendez-Small,990.0
+Simon-Werner,990.0
+"Swanson, Fuentes and Frederick",990.0
+Santana Inc,990.0
+"Nash, Newton and Hodge",989.0
+"Berg, Dillon and Mueller",988.0
+Brady-Farrell,984.0
+Rowland LLC,980.0
+Dudley-Johnson,980.0
+Mooney-Olsen,979.0
+"Hale, Grimes and Calhoun",979.0
+"Goodwin, Daugherty and Hull",979.0
+"Leblanc, Manning and Stout",978.0
+Lopez and Sons,978.0
+"Faulkner, Cervantes and Morales",976.0
+Burns-Chavez,976.0
+Terrell-Huerta,975.0
+"Huber, Clark and Griffith",974.0
+Calderon PLC,971.0
+Potter LLC,971.0
+Neal-Harding,970.0
+"Olson, Macdonald and Kemp",969.0
+"Hayden, Woodward and Barton",969.0
+Nolan Inc,968.0
+Williamson PLC,965.0
+Gomez PLC,964.0
+Glass PLC,964.0
+Murray Group,961.0
+"Guzman, Ayers and Trujillo",960.0
+Campos-Chan,959.0
+Gilbert-Rangel,959.0
+Clements Inc,958.0
+Hobbs-Sanders,957.0
+"Huffman, Hobbs and Flowers",957.0
+Donaldson and Sons,957.0
+Tanner PLC,955.0
+"Haas, Bowman and Bass",952.0
+Atkinson Inc,952.0
+Christensen and Sons,951.5
+Vance PLC,951.0
+Underwood-Cox,948.0
+"Logan, Vega and Haynes",947.0
+"Holloway, Cohen and Houston",946.0
+"Reed, Sheppard and Irwin",944.0
+Gill-Ochoa,944.0
+Moreno PLC,944.0
+"Singh, Morgan and Houston",943.0
+Chase-Pugh,943.0
+Guzman Inc,942.0
+"Macias, Griffith and Cooper",940.0
+Lozano Inc,939.0
+Pace and Sons,938.0
+Griffith-Hebert,935.0
+"Pearson, Hubbard and Woodward",935.0
+Dixon-Santana,934.0
+Kirby and Sons,934.0
+"Reynolds, Martinez and Bradley",934.0
+Duran-Cole,933.0
+Beasley PLC,932.0
+Kramer PLC,931.0
+Griffin and Sons,931.0
+Owens and Sons,931.0
+Haney Ltd,930.0
+Mcdonald-Fernandez,930.0
+Fletcher PLC,929.0
+Downs-Wood,928.0
+"Holmes, Gibbs and Shields",928.0
+Herring Ltd,927.0
+"Hayes, Peck and Bridges",926.0
+Mcfarland-Buck,926.0
+Rose-Escobar,925.0
+Mcconnell PLC,922.0
+"Banks, Werner and Barron",921.0
+Stephens-Keller,919.0
+"Malone, Bowman and Holland",919.0
+Morse-Combs,918.0
+Le-Fuller,917.0
+"Lucero, Swanson and Murray",916.0
+Bowen Inc,916.0
+Booth-Gamble,915.0
+Finley Ltd,915.0
+Manning-Daniels,914.0
+"Montoya, Barnes and Haley",914.0
+Kaufman-Nash,913.0
+"Hensley, Hawkins and Gregory",910.0
+"Travis, Strong and Mack",909.0
+"Owens, Preston and Garza",909.0
+Nunez-Dyer,908.0
+Mcdaniel and Sons,908.0
+Shea-Wang,908.0
+Waters Inc,908.0
+Lester-Mendez,907.0
+"Terry, Murray and Morse",907.0
+Hunter Inc,906.0
+Huffman Group,903.0
+Thomas Inc,902.0
+"Munoz, Jensen and Combs",901.0
+"Bolton, Sandoval and Decker",899.0
+Andrews-Mcgee,898.0
+"Fisher, Chan and Ashley",897.0
+Harmon-Foster,897.0
+Fry LLC,897.0
+Rowe-Perkins,896.0
+Matthews-Winters,896.0
+"Ruiz, Roach and Becker",896.0
+"Hurst, Callahan and Roberson",893.0
+"Sharp, Chase and Perkins",893.0
+Price-Joyce,893.0
+Cochran-Burton,892.0
+Frederick Ltd,892.0
+Bridges Ltd,891.0
+Jackson Ltd,890.0
+Valdez-Vincent,890.0
+Aguilar PLC,889.0
+"Rhodes, Flynn and Townsend",887.0
+Merritt-Maddox,887.0
+Knox-Santana,887.0
+Todd Group,884.0
+Wang Group,884.0
+Nichols Inc,884.0
+Pierce PLC,883.0
+Small Inc,882.0
+Moreno-Glass,882.0
+Hull LLC,881.0
+Bond-Gillespie,879.0
+"Goodman, Campos and Daniels",878.0
+Schneider Group,874.0
+"Mack, Morris and Wall",873.0
+"Lynn, Simpson and Mcmillan",872.0
+Carey LLC,869.0
+"Gregory, Macias and Yang",869.0
+Whitaker Group,869.0
+"Montes, Hickman and Stout",868.0
+Pham-Erickson,867.0
+Marshall Group,867.0
+Campos Inc,867.0
+"Gordon, Peck and Hurley",866.0
+Arnold Group,866.0
+Curtis-Cantu,866.0
+Ramirez-Terry,865.0
+Whitehead PLC,864.0
+Malone and Sons,863.0
+"Berger, Nash and Flowers",860.0
+"Allen, Maxwell and Barnett",859.0
+"Dyer, Spears and Melton",858.0
+Hughes and Sons,858.0
+"Mckenzie, Ayala and Griffith",858.0
+Nash LLC,856.0
+Rodriguez PLC,856.0
+"Orr, Carr and Williams",854.0
+"Cunningham, Day and Miller",854.0
+"Cordova, York and Fry",852.0
+Carroll-Browning,852.0
+Hayden-Shelton,852.0
+"Hughes, Melendez and Trevino",850.0
+Hopkins PLC,848.0
+West and Sons,847.0
+Pena-Singleton,847.0
+May and Sons,841.0
+Collier LLC,840.0
+Gallegos-Schroeder,840.0
+Bowman-Arnold,840.0
+Wyatt-Spencer,839.0
+"Lawson, Bass and Francis",837.0
+"Yates, Shelton and Henry",837.0
+"Chen, Hatfield and Barnes",836.0
+Jenkins-Haney,835.0
+Ware PLC,831.0
+Gaines-Schneider,829.0
+"Lucero, Baxter and Diaz",828.0
+Navarro-Mcmahon,827.0
+"Payne, Joseph and Ponce",825.0
+Burton-Matthews,823.0
+Shaw-Chung,823.0
+Barron-Shea,823.0
+Thompson-Richards,821.0
+"Ware, Singh and Holloway",818.0
+Jackson PLC,818.0
+"Briggs, Goodwin and Fisher",817.0
+Choi LLC,813.0
+"Rhodes, Watson and Brewer",812.0
+Campos-Mcdonald,812.0
+"Aguilar, Stephens and Yates",812.0
+Hooper-Bender,811.0
+Berry-Garrett,810.0
+Forbes and Sons,807.0
+"Huerta, Cummings and Cross",807.0
+"Duncan, Gonzales and Watkins",806.0
+Morales-Harrington,806.0
+Lang-Coleman,805.0
+"Flowers, Santos and Vega",805.0
+"Bell, Herring and Boyle",805.0
+Stuart-Trevino,805.0
+Wheeler PLC,805.0
+"Bentley, Bush and Gilbert",803.0
+"Oliver, Reynolds and Shaw",803.0
+Craig and Sons,801.0
+"Faulkner, Daugherty and Molina",798.0
+Gibson-Briggs,795.0
+Abbott-Foster,790.0
+"Elliott, Woodward and Short",789.0
+"Stevenson, Goodman and Hancock",789.0
+"Cunningham, Harding and Ruiz",787.0
+Hanson-Buchanan,787.0
+Mathis-Lewis,786.0
+Chavez-Dawson,786.0
+Quinn-Collins,784.0
+"Shaffer, Bowers and Parrish",783.0
+Higgins-Leon,783.0
+Brooks-Martin,778.0
+"Bass, Chambers and Ellison",776.0
+Francis-Johns,776.0
+Friedman-Clayton,774.0
+"Schneider, Huber and Dougherty",774.0
+Hopkins-Barrett,773.0
+Tate-Villa,770.0
+Daugherty Ltd,769.0
+Frost-Richmond,769.0
+Bowman-Cortez,766.0
+"Ramirez, Dean and Mueller",766.0
+Nichols Ltd,766.0
+Riggs Inc,765.0
+Webb-Roman,765.0
+Huff-Morrow,765.0
+Sutton Ltd,764.0
+"Brewer, Luna and Rowland",763.0
+Fowler-Williams,763.0
+Ramos-Riddle,762.0
+Monroe PLC,761.0
+"Fernandez, Duran and James",761.0
+"Campbell, Garcia and Grimes",761.0
+Brooks-Underwood,761.0
+Saunders-Patel,760.0
+Pearson-Foley,759.0
+Armstrong LLC,758.0
+Reese-Cox,757.0
+Spencer Group,757.0
+Lucas-Vance,757.0
+Nielsen Ltd,755.0
+"George, Oconnor and Gray",754.0
+Schneider LLC,753.0
+"Patel, Wyatt and Wolfe",748.0
+Larsen-Santos,748.0
+Hurst-Blevins,748.0
+Giles LLC,746.0
+Hunt Ltd,742.0
+"Phelps, Kline and Sawyer",738.0
+"Wilkins, Horne and Farrell",738.0
+Aguilar-Rangel,737.0
+Gregory-Sheppard,735.0
+Oconnell PLC,731.0
+"Parker, Stevens and Love",731.0
+Olson-Mills,729.0
+"Beasley, Miles and Patrick",729.0
+"Mata, Haley and Sosa",726.0
+Washington Group,724.0
+Diaz Group,721.0
+Schroeder Inc,721.0
+Mckinney PLC,720.0
+Wood-Juarez,720.0
+"Kirk, Cuevas and Ho",719.0
+Hayden and Sons,718.0
+Hughes-Rocha,718.0
+Shaw-White,715.0
+Christensen-Hendrix,709.0
+"White, Daugherty and Hunt",709.0
+Moon-Hebert,709.0
+Orr Ltd,708.0
+Warner-Hodges,707.0
+Leonard and Sons,706.0
+Haas-Dougherty,704.0
+"Mccormick, Burnett and Pace",703.0
+Holder-Downs,701.0
+"Pham, Stein and Ortega",701.0
+"Berry, Middleton and Strong",700.0
+Perez Ltd,699.0
+Page-Bauer,699.0
+Romero PLC,698.0
+Ali LLC,698.0
+Solomon Inc,697.0
+Larsen-Castro,696.0
+Marks-Schaefer,694.0
+Daniels-Robertson,692.0
+"Patton, Castro and Williamson",690.0
+Simmons Group,688.0
+Boyer-Fleming,688.0
+Blackwell-Hill,688.0
+Lucero-Klein,685.0
+"Trevino, Wang and Lam",684.0
+Lucas Inc,683.0
+"Matthews, Farrell and Francis",681.0
+Johnston and Sons,680.0
+"Fernandez, Mcdonald and Mayer",679.0
+Daniels-Pearson,677.0
+Sloan-Curry,676.0
+Walker-Woods,674.0
+Ray-Bullock,674.0
+Booth-Bernard,673.0
+"Pierce, Huffman and Vaughn",673.0
+Meadows LLC,673.0
+"Preston, Lamb and Nunez",670.0
+Charles-Glass,670.0
+"Elliott, Olson and Potts",670.0
+Wong-Perez,669.0
+Fox-Weaver,668.0
+Fitzpatrick-Stark,666.0
+Gardner-Donaldson,665.0
+"Joyce, Mcdonald and Maldonado",663.0
+Singleton-Tate,663.0
+Fry-Sexton,663.0
+Cole-Peters,662.0
+Porter-Chavez,662.0
+"Mcmillan, Robertson and Norris",660.0
+Mueller-Steele,660.0
+Pittman Inc,659.0
+Shepherd-Sweeney,658.0
+Spears-Saunders,656.0
+Boyle-Guerra,655.0
+"Cline, Schneider and Ramirez",653.0
+Barajas-Vasquez,653.0
+Velazquez Group,652.0
+Mcgrath PLC,650.0
+Smith-Garrison,648.0
+Murray-Petersen,646.0
+"Kerr, Valenzuela and Dudley",646.0
+Figueroa-Bowen,643.0
+Mata-Norman,643.0
+Goodwin-Sanchez,636.0
+"Weeks, Jensen and Andrade",635.0
+"Bond, Carpenter and Clements",634.0
+Spencer-Black,632.0
+"Bennett, Ingram and Gordon",632.0
+Rodgers Group,631.0
+Eaton PLC,631.0
+Clements PLC,630.0
+"Ortiz, Dodson and Cuevas",628.0
+Manning Ltd,627.0
+"Goodman, Brock and Roach",627.0
+"Dunn, Chavez and Fitzgerald",627.0
+Hunt-Lowery,627.0
+"Gray, Raymond and Morrison",626.0
+Shea-Guzman,625.0
+"Dixon, Ramirez and Williamson",625.0
+Frost Inc,625.0
+Leblanc PLC,625.0
+Dunn PLC,624.0
+Travis-Greer,624.0
+Shelton-Faulkner,622.0
+"Flynn, Ayers and Duffy",622.0
+"Gardner, Dickson and Hernandez",622.0
+Costa LLC,622.0
+Mclean Ltd,622.0
+"Soto, Raymond and Doyle",621.0
+"Bradford, Malone and Mclean",616.0
+"Hull, Baldwin and Weber",615.0
+Ramos-Cardenas,615.0
+"Fry, Oneal and Montes",614.0
+Castaneda-Sims,614.0
+"Rice, Stuart and Monroe",612.0
+"Krause, Bass and Horn",612.0
+Hanna Group,612.0
+Wilkins Inc,610.0
+Santiago-Chapman,609.0
+"Sanford, Paul and Byrd",608.0
+"Branch, Gallagher and Travis",606.0
+Combs-Briggs,604.0
+"Barnett, Lucero and Morales",604.0
+"Leonard, Benitez and Wu",603.0
+Trevino Inc,601.0
+Velez Group,601.0
+Hernandez-Bowman,600.0
+Joyce Ltd,599.0
+"Dawson, Cain and Valencia",599.0
+"Snow, Thompson and Delacruz",598.0
+"Mills, Mendez and Waller",596.0
+Yates Group,595.0
+Mills Group,594.0
+Vang-Jacobs,594.0
+"Schroeder, Hill and Anthony",593.0
+Roberts-Miranda,589.0
+"Chan, Christensen and Gentry",588.0
+Holland-Downs,587.0
+"Villegas, Ford and Mccoy",585.0
+Mann-Yoder,585.0
+Gonzales and Sons,585.0
+Gaines-Pruitt,583.0
+Villarreal and Sons,583.0
+"Cain, Sparks and Cooke",583.0
+Spears Group,580.0
+Weber Group,579.0
+Vance-Howe,578.0
+"Mcknight, Rosales and Valencia",576.0
+"Jarvis, Owen and Downs",576.0
+"Obrien, Lucero and Krause",575.0
+Duarte Ltd,573.0
+Bradshaw-Garrison,568.0
+Castaneda Group,568.0
+"Finley, Rush and Hawkins",567.0
+Dudley LLC,567.0
+"Wagner, Rangel and Morton",567.0
+Riggs-Edwards,566.0
+"Gregory, Stanton and Dominguez",565.0
+Galvan-Wang,565.0
+"Bonilla, Robbins and Hayes",565.0
+"Snow, Cobb and Rosales",562.0
+Ruiz Group,562.0
+Hays Ltd,561.0
+Morrow-Hickman,561.0
+Weeks-Flynn,560.0
+Saunders Group,560.0
+Barajas-Horne,555.0
+"Key, Gomez and Oneill",555.0
+Fitzpatrick Group,554.0
+"Ramsey, Huynh and Mcdowell",553.0
+"Rios, Duarte and Harris",552.0
+Fischer-Chandler,551.0
+Krueger Group,550.0
+Steele and Sons,550.0
+Hess-Daniel,549.0
+"Banks, Ritter and Gilbert",546.0
+"Stanton, Molina and Leach",545.0
+Carrillo-Riddle,544.0
+"Fowler, Hunter and Hodges",544.0
+"Lutz, Oconnell and Moody",544.0
+Morrow and Sons,544.0
+Dean-Haas,543.0
+Goodwin LLC,542.0
+Mckinney-Huynh,540.0
+"Donovan, Cline and Avila",540.0
+Bates-Boone,540.0
+Lambert LLC,539.0
+"Franklin, Liu and Evans",537.0
+Fuentes-Curtis,537.0
+"Rush, Andersen and Hunter",537.0
+Rogers Ltd,536.0
+Ochoa and Sons,536.0
+"Vasquez, Graham and Rangel",534.0
+Keith-Shelton,534.0
+"Acosta, Cortez and Phelps",534.0
+"Zuniga, Townsend and Huber",533.0
+Chase-Reynolds,533.0
+House PLC,532.0
+"Orozco, Nguyen and Miles",530.0
+Hanson-West,529.0
+"Bennett, Marsh and Levine",528.0
+Lester-Ross,528.0
+Montgomery Group,527.0
+"Whitaker, Davenport and Esparza",525.0
+"Fowler, Mendoza and Mcdaniel",525.0
+Krause and Sons,525.0
+Robertson Inc,523.0
+Osborne-Rivera,522.0
+Carney-Reyes,521.0
+Chandler LLC,521.0
+"Ho, Jarvis and Castaneda",520.0
+"Landry, Blankenship and Harrison",520.0
+Stokes and Sons,519.0
+Berry-Haley,519.0
+"Daugherty, Cooper and Gardner",518.0
+Costa-Dillon,518.0
+Quinn-Fields,517.0
+"Duarte, Cisneros and Fitzpatrick",517.0
+Prince Ltd,516.0
+Farmer-Ferguson,514.0
+Douglas Group,510.0
+"Koch, Strickland and Stout",509.0
+Bright-Mcknight,508.0
+Newman-Malone,507.0
+Hodges-Gutierrez,506.0
+Houston-Lawson,506.0
+"Francis, Holloway and Glenn",505.0
+"Berry, Lowery and Mccann",505.0
+"Dillon, Ruiz and Clay",505.0
+"Mccarthy, Hahn and Colon",505.0
+"Russell, Newton and Mcgee",504.0
+"Park, Greer and Stewart",503.0
+Paul-Gates,501.0
+"Miller, Harrington and Blanchard",500.0
+Kaufman-Rangel,500.0
+"Good, Weiss and Castillo",499.0
+"Calderon, Blake and Cline",499.0
+"Rogers, Bradley and Buchanan",499.0
+Pollard-Riley,498.0
+"Roth, Barry and Steele",498.0
+Lowery Ltd,497.0
+Rojas-Hendrix,497.0
+Flowers-Werner,494.0
+Foley and Sons,490.0
+Briggs-Hendricks,489.0
+"Hansen, Stein and Park",489.0
+Bowers-Moreno,489.0
+Richards-Hess,489.0
+Guzman-Leach,488.0
+Cowan and Sons,486.0
+Kelley-Richard,484.0
+Curry-Reed,482.0
+Arellano PLC,481.0
+Banks-Dyer,478.0
+Lawson-Mullen,478.0
+"Ibarra, Yates and West",477.0
+Bridges Inc,476.0
+"Koch, Floyd and Brewer",476.0
+"Jenkins, Lester and Rios",476.0
+Fischer-Moran,474.0
+Hampton-Henson,473.0
+"Elliott, Howell and Baldwin",473.0
+Brock-Owen,472.0
+"Crosby, Fitzpatrick and Lane",472.0
+"Baldwin, Watson and Beasley",471.0
+Mcclain-Simpson,469.0
+"Meyers, Schwartz and Mcclure",469.0
+Hardin-Espinoza,467.0
+Thornton-Malone,466.0
+Beasley-Valdez,466.0
+Harrington-Simpson,464.0
+"Spears, Odom and Bennett",463.0
+Huerta-Holder,463.0
+Duke Group,460.0
+Terrell LLC,460.0
+"Garcia, Salazar and Roberson",459.0
+"Ho, Lang and Shannon",459.0
+Harper Inc,459.0
+Robertson-Crane,456.0
+Lester LLC,456.0
+Velasquez-Williams,456.0
+"Hensley, Richard and Gutierrez",455.0
+"Flores, Burton and Lawrence",453.0
+Mcdonald LLC,453.0
+Bennett-Hebert,453.0
+Khan-Ochoa,452.0
+"Dunlap, Bonilla and Leon",451.0
+"Curry, Boyd and Reese",451.0
+"Velazquez, Pena and Ryan",450.0
+Rasmussen-Pollard,449.0
+Baldwin-Schneider,449.0
+"Simpson, Atkins and Daniel",448.0
+Greene-Ayers,448.0
+"Gould, Mays and Clayton",447.0
+Sutton PLC,447.0
+"Price, Mueller and Yates",445.0
+"Reeves, Valenzuela and Zavala",443.0
+Francis-Novak,442.0
+"Thomas, Cannon and Weber",442.0
+"George, Gillespie and Mcclure",442.0
+Reyes Inc,440.0
+Mathews and Sons,439.0
+Melton Ltd,437.0
+"Glover, Cline and Mann",437.0
+"Lang, Paul and Silva",437.0
+"Mccall, Bass and Dudley",436.0
+Price LLC,435.0
+Ashley-Carroll,435.0
+Bond PLC,434.0
+Hammond-Perkins,434.0
+"Terry, Palmer and Sexton",433.0
+"Thornton, Payne and Waters",433.0
+Lee Ltd,432.0
+Downs Inc,431.0
+Griffith-Rios,429.0
+Cabrera-Whitaker,428.0
+Mcmillan-Welch,426.0
+"Cantrell, Welch and Trevino",423.0
+Fitzgerald Group,423.0
+Washington Ltd,422.0
+"Lin, Casey and Allison",421.0
+"Haynes, Decker and Meadows",420.0
+Hampton Inc,417.5
+Diaz-Atkinson,417.0
+Gates-Riggs,416.0
+Mathis Ltd,415.0
+"Padilla, Dunn and Pruitt",414.0
+Matthews-Baker,414.0
+Evans LLC,413.0
+"Espinoza, Woodard and Burgess",413.0
+Burton-Gould,413.0
+Lowe PLC,413.0
+Matthews Ltd,411.0
+"Chang, Christensen and Cain",411.0
+Shea LLC,409.0
+"Mcfarland, Cooley and Obrien",408.0
+Roach and Sons,406.0
+"Torres, Waters and Gallagher",406.0
+"Bass, Navarro and Mercado",406.0
+"James, Barker and Booker",406.0
+Dickson-Vega,406.0
+Lane-Kennedy,405.0
+"Mcmillan, Russell and Weber",405.0
+Mccall-Lynn,405.0
+"Luna, Blevins and Crane",404.0
+Carrillo Inc,403.0
+Aguilar-Banks,403.0
+Stafford LLC,402.0
+Zavala Group,401.0
+Fox Group,400.0
+Bass-Hess,400.0
+Ramirez-Pearson,398.0
+Sims-Barajas,396.0
+Wheeler Ltd,395.0
+Yoder-Hensley,395.0
+Flynn LLC,393.0
+Pearson-Browning,392.0
+"Little, Horn and Page",392.0
+Proctor-Short,392.0
+Roy-Maxwell,390.0
+Brock-Sellers,390.0
+"Long, House and Cannon",388.0
+Joyce Inc,388.0
+"Sanders, Figueroa and Mcclain",385.0
+Maldonado PLC,385.0
+Moreno-Madden,385.0
+Lane LLC,384.0
+Becker and Sons,384.0
+"Blevins, Arias and Choi",384.0
+"Mcneil, Pugh and Cox",383.0
+Hunter PLC,383.0
+Sawyer-Mckay,383.0
+Banks PLC,382.0
+Guerrero-Huff,380.0
+Wallace Group,380.0
+Benjamin and Sons,380.0
+Spence-Kim,379.0
+Wang-Pope,374.0
+Nolan-Lam,374.0
+Sims Ltd,373.0
+Barrett PLC,372.0
+Espinoza-Mccullough,372.0
+Christian and Sons,371.0
+Barr-Riley,371.0
+"Rivas, Tucker and Humphrey",369.0
+"Bush, Archer and Hurley",368.0
+Powell Inc,367.0
+"Miranda, Lucero and Blevins",367.0
+"Doyle, Aguirre and Hill",366.0
+Mays and Sons,366.0
+Spears Inc,365.0
+"Fletcher, Bates and Stout",365.0
+Brooks-Lin,364.0
+Roth-Maddox,363.0
+"Jackson, Shaffer and Garner",363.0
+Simpson-Ross,362.0
+Campos PLC,362.0
+"Walton, Marshall and Black",361.0
+"Lam, Howard and Page",360.0
+Leon LLC,357.0
+Cunningham Group,357.0
+Tanner LLC,356.0
+Mcclure Inc,355.0
+Henderson LLC,355.0
+"Cannon, Lambert and Cohen",352.0
+"Henderson, Dunn and Bradshaw",351.0
+Black-Meadows,351.0
+Tyler-Burke,350.0
+Bolton-Hensley,349.0
+Vega-Fernandez,349.0
+Roth-Bates,348.0
+"Yates, Lewis and Dudley",347.0
+"Jackson, Simpson and Jensen",347.0
+Hebert-Costa,347.0
+Mckenzie-Hensley,346.0
+"Strickland, Jimenez and Stevens",346.0
+Brown Group,345.0
+Hogan-Carson,342.0
+"Lam, Henson and Marquez",342.0
+Hardin-Haley,341.0
+Greer-Herring,339.0
+"Griffith, Nixon and Bass",338.0
+Pratt-Serrano,337.0
+Thornton-Moyer,337.0
+Patton-Choi,337.0
+Glenn Inc,336.0
+Kennedy-Weiss,335.0
+"Olsen, Tanner and Mccormick",334.0
+Cooke LLC,331.0
+"Larson, Mann and Guerra",330.0
+"Armstrong, Farley and Dixon",330.0
+Patrick Group,329.0
+Fisher-Le,328.0
+Knox Inc,328.0
+Orozco Ltd,327.0
+Nixon LLC,326.0
+Morgan-Cisneros,325.0
+Rocha-Bright,325.0
+Chase Ltd,325.0
+"Rivas, Huffman and Mason",322.0
+Sutton Group,320.0
+Heath-Pollard,319.0
+Dawson-Rivas,319.0
+Pennington and Sons,318.0
+Nelson LLC,318.0
+Nash-Hughes,317.0
+Mccormick Inc,314.0
+Singh Inc,313.0
+Wyatt Group,312.0
+Mann-Cole,311.0
+Byrd Ltd,310.0
+Rios PLC,310.0
+Jackson-Wall,310.0
+"Warren, Huang and Nunez",310.0
+"Nixon, Mcclure and Stephenson",310.0
+Greer Inc,309.0
+"Wise, Barry and Proctor",307.0
+Pena-Schultz,306.0
+"Romero, Krueger and Ferrell",305.0
+Avila Ltd,305.0
+"Lynch, Ballard and Garrison",305.0
+"Davenport, Vazquez and Peters",302.0
+"Cohen, Long and Bauer",301.0
+Barron-Benjamin,301.0
+"Li, Baldwin and Watts",301.0
+"Mccarty, Kelly and Tate",301.0
+Shea Ltd,300.0
+"Cook, Frey and Ward",300.0
+Holt-Parks,298.0
+Raymond Ltd,298.0
+"Herring, Burch and Weber",297.0
+Ochoa LLC,297.0
+Velasquez PLC,297.0
+"Strickland, Larson and York",296.0
+Short Ltd,296.0
+"Branch, Stephenson and Forbes",295.0
+Benson LLC,295.0
+Carroll LLC,293.0
+"Pugh, Figueroa and Hill",292.0
+Brandt-Cherry,292.0
+"Gutierrez, Chandler and Wilson",292.0
+Welch PLC,291.0
+"Thompson, Reeves and Kirk",291.0
+Olsen Inc,290.0
+Brock Inc,289.0
+Collier Inc,288.0
+"Compton, Costa and Davila",288.0
+Rios-Griffin,288.0
+Little-Hamilton,287.0
+Barnett and Sons,285.0
+Foley-Schroeder,284.0
+Fox LLC,284.0
+Day-Dixon,282.0
+"Owen, Caldwell and Salazar",282.0
+Contreras-Bonilla,280.0
+Jacobson and Sons,277.0
+Wise and Sons,277.0
+Zhang and Sons,276.0
+Bond Ltd,276.0
+Cobb-Patel,275.0
+Lang-Santana,274.0
+Mitchell-Sanchez,274.0
+"Price, Ford and Shaw",273.0
+Henderson-Howe,273.0
+Garcia-Crawford,272.0
+Weiss-Lyons,272.0
+Clarke PLC,266.0
+Gentry-Mcmillan,266.0
+"Cross, Shannon and Page",266.0
+Huff-Obrien,265.0
+Waller-Whitney,264.0
+Davis-Bradley,261.0
+"Wang, Vaughn and Wilson",261.0
+Bernard PLC,259.0
+Lara Group,258.0
+Mata PLC,257.0
+"Avery, Norton and Cobb",256.0
+"Hart, Mercer and Clayton",256.0
+Odonnell-Butler,256.0
+"Whitehead, Clark and Guzman",256.0
+"Houston, Barnett and Hernandez",256.0
+"Walton, Lawson and Gaines",256.0
+Munoz Group,256.0
+"Cox, Chan and Phelps",255.0
+Landry-Austin,254.0
+Cisneros-Bishop,253.0
+"Cortez, Leach and Raymond",249.0
+Bush-Weeks,249.0
+Cannon Ltd,246.0
+Roman and Sons,245.0
+Stephenson PLC,245.0
+Jensen-Orr,245.0
+Mckinney-Mccarty,243.0
+"Avila, Stone and Spence",237.0
+Hunt PLC,237.0
+"Mosley, Cobb and Lucero",235.0
+Wagner-Bright,234.0
+Dillon-Russo,233.0
+Mccarthy-Spears,232.0
+Henderson-Mcclain,230.0
+Morales-Krause,229.0
+"Wall, Morrison and Hurley",229.0
+Mejia-Vincent,228.0
+Pittman-Padilla,227.0
+Salas-Bates,226.0
+Cain PLC,226.0
+Erickson Inc,225.0
+Acevedo-Richard,225.0
+"Valencia, Tanner and Sosa",224.0
+"Mitchell, Baird and Hernandez",223.0
+Gill Group,223.0
+Hendrix LLC,222.0
+Mcclure PLC,219.0
+Dominguez-Weiss,219.0
+Shepherd and Sons,218.0
+"Mccoy, Turner and Conrad",216.0
+"Poole, Browning and Horn",216.0
+Winters Ltd,216.0
+Chaney-Gentry,215.0
+Klein-Bailey,208.0
+Holden-Gates,207.0
+"Glover, James and Booker",207.0
+Singh-Estrada,206.0
+White-Herman,206.0
+"Owen, Joyce and Mcclain",206.0
+Brady-Barnes,203.0
+May-Shepherd,201.0
+Joseph-Chan,200.0
+Melendez-Potts,197.0
+Ayers-Day,194.0
+Andrade-Gentry,194.0
+"Goodwin, Wolfe and Jenkins",193.0
+"Oconnor, Carson and Reynolds",190.0
+Adams-Lucero,189.0
+Garner LLC,188.0
+"Ortiz, Merritt and Sanford",187.0
+Gonzalez LLC,186.0
+"Berg, House and Carrillo",186.0
+"Hansen, Mcgrath and Barton",186.0
+Bradley-Manning,184.0
+Serrano Inc,184.0
+Livingston-Steele,182.0
+Armstrong-Ramirez,181.0
+Hartman LLC,181.0
+Briggs-Krause,180.0
+Mcintosh Inc,179.0
+Mcclain-Caldwell,179.0
+Holt Inc,179.0
+Harrison Ltd,177.0
+"Cuevas, Hardy and Crane",177.0
+"Sullivan, Benton and Howe",176.0
+Forbes-Mendoza,176.0
+Michael Inc,174.0
+"Mora, Jensen and Tapia",174.0
+Wiggins-Johnson,172.0
+"Johnson, Blankenship and Porter",172.0
+"Payne, Mcknight and Michael",171.0
+"Chavez, Whitney and Alexander",168.0
+"Clarke, Blake and Fleming",163.0
+Kirk Group,163.0
+Mckee Ltd,162.0
+Carey-Patel,160.0
+Duncan-Hayes,160.0
+Randolph-James,160.0
+"Jenkins, Doyle and Melendez",158.0
+Mcbride-Wyatt,153.0
+"Higgins, Travis and Hart",152.0
+Garcia-Jones,149.0
+Chaney PLC,147.0
+Silva Inc,147.0
+Dougherty LLC,146.0
+"Decker, Vasquez and Cervantes",146.0
+"Case, Buchanan and Kelly",146.0
+"Massey, Stephenson and Huff",145.0
+Sherman Group,144.0
+Roberson LLC,140.0
+"Hubbard, Fox and Ray",140.0
+Patton-Carr,139.0
+Le-Barron,139.0
+Brady-David,136.0
+"Montoya, Adkins and Campos",135.0
+Grant Inc,133.0
+Reyes PLC,131.0
+Webb LLC,130.0
+"Deleon, Hubbard and Joseph",129.0
+"Deleon, Schroeder and Steele",128.0
+Duarte-Nielsen,128.0
+"Mullins, Anthony and Reid",127.0
+Thomas-Downs,123.0
+Jarvis-David,120.0
+Chung Ltd,119.0
+Curry Ltd,118.0
+Sanders PLC,117.0
+Shea-Sosa,116.0
+"Walsh, Shaffer and Hahn",114.0
+Durham-Harmon,114.0
+Burch Group,114.0
+Sawyer Inc,113.0
+"Ferguson, Mcgrath and Logan",112.0
+"Todd, Day and Wall",112.0
+"Mccormick, Franco and Brandt",112.0
+"Osborne, Ford and Butler",112.0
+Alvarado Group,108.0
+Cochran-Rich,106.0
+Krause PLC,105.0
+Banks and Sons,103.0
+"Terrell, Cuevas and Rose",102.0
+Bennett-Wiggins,102.0
+"Oconnell, Savage and Dougherty",102.0
+Gilmore-Wells,100.0
+Meza-Banks,99.0
+Krause-Ramos,99.0
+Blevins and Sons,97.0
+Dunn-Whitney,95.0
+"Kirk, Erickson and Gomez",95.0
+"Wolf, Browning and Moody",94.0
+Bruce Group,94.0
+Mcfarland-Lopez,93.0
+Montoya Group,90.0
+Cunningham Ltd,89.0
+Cabrera-Zamora,89.0
+Gray Inc,87.0
+Sellers LLC,84.0
+Lewis-Johnston,84.0
+"Henderson, Bautista and Irwin",82.0
+Thomas-Dyer,82.0
+Austin Inc,81.0
+"Gentry, Elliott and Aguirre",80.0
+Owen Ltd,80.0
+Grimes-Collier,78.0
+"Li, Lewis and Alvarado",77.0
+"Schmitt, Fields and Marquez",77.0
+"Stevens, Barton and Hull",75.0
+Bradford-Yu,74.0
+Byrd and Sons,74.0
+Friedman and Sons,74.0
+Green and Sons,73.0
+Humphrey Group,72.0
+Gonzalez-Montes,72.0
+"Odom, Norton and Foster",69.0
+Dean Ltd,69.0
+Cardenas Inc,68.0
+Gentry LLC,66.0
+Patterson-Lawson,65.0
+"Hernandez, Robertson and Hammond",61.0
+Silva and Sons,59.0
+"Vaughan, Gray and Logan",57.0
+Ochoa Ltd,55.0
+"Lynn, Figueroa and Craig",54.0
+"Conway, Villanueva and Kerr",54.0
+Marshall-Wise,53.0
+Cabrera-Barber,52.0
+Gallegos Group,51.0
+"Lane, Blake and Graham",47.0
+Holmes-Cardenas,46.0
+"Perez, Alvarez and Gordon",45.0
+Lang LLC,45.0
+Boyd Ltd,44.0
+Li Ltd,44.0
+"Camacho, Hicks and Fuller",43.0
+Baldwin Group,41.0
+Durham-Leblanc,39.0
+Everett Ltd,38.0
+Hensley LLC,37.0
+"Zavala, Pugh and Wiley",35.0
+"Boone, Velazquez and Hunt",34.0
+Schmitt-Barrera,34.0
+Calderon Group,32.0
+Buck-Hoover,30.0
+Moran-Rangel,29.0
+May Inc,28.0
+French Group,26.0
+"Sherman, Shepherd and Cunningham",24.0
+"Underwood, Ingram and Gregory",23.0
+Maldonado and Sons,22.0
+"Houston, Kennedy and Conway",21.0
+Booker-Sexton,21.0
+Espinoza-Anderson,20.0
+Vincent Group,20.0
+"Beltran, Khan and Proctor",20.0
+King and Sons,20.0
+Oliver PLC,19.0
+"Maxwell, Terrell and Rosario",18.0
+Pierce-Medina,17.0
+Pacheco PLC,16.0
+Hebert Group,16.0
+"Duffy, Knapp and Orozco",16.0
+Fox-Stone,16.0
+"Hoffman, Bender and Jackson",14.0
+Benton-Townsend,14.0
+Gonzales-Porter,14.0
+Nicholson Ltd,11.0
+Novak-Rose,11.0
+Reilly PLC,9.0
+Woodward Group,8.0
+Ross-Gray,7.0
+Holland-Jefferson,4.0
+Bailey Group,1.0
+Lane-Mcneil,1.0
