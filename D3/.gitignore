@@ -1,0 +1,7 @@
+# Ignore all .pem files
+aws-keypair.pem
+myAzVmKeypair.pem
+
+# Ex2
+Ex2/.env
+Ex2/*_accessKeys.csv
