@@ -1,0 +1,23 @@
+id: ingest-api-to-csv
+namespace: examples.api
+
+tasks:
+  - id: fetch-api
+    type: io.kestra.plugin.core.http.Request
+    uri: https://jsonplaceholder.typicode.com/users
+    method: GET
+  - id: convert-to-csv
+    type: io.kestra.plugin.scripts.python.Script
+    outputFiles:
+      - output.csv
+    script: |
+      import json
+      import csv
+
+      data = """{{ outputs["fetch-api"]["body"] }}"""
+      users = json.loads(data)
+
+      with open("output.csv", "w", newline="") as csv_file:
+          writer = csv.DictWriter(csv_file, fieldnames=users[0].keys())
+          writer.writeheader()
+          writer.writerows(users)
