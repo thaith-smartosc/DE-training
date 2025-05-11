@@ -1,0 +1,12 @@
+# Core Kafka client and Avro support
+confluent-kafka
+confluent-kafka[avro]
+
+# HTTP requests for Schema Registry interaction
+requests
+
+# Avro schema support
+avro-python3
+
+# Optional faster Avro implementation
+fastavro
