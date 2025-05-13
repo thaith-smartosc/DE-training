@@ -1,0 +1,6 @@
+google-cloud-bigquery
+pandas
+numpy
+google-auth
+google-auth-oauthlib
+
