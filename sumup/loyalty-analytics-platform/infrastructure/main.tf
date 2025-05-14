@@ -1,7 +1,7 @@
 provider "google" {
   project     = var.project_id
   region      = var.region
-  credentials = file("service-account.json")
+  credentials = file("service-account-key.json")
 }
 
 # BigQuery Dataset
@@ -20,12 +20,12 @@ resource "google_storage_bucket" "data_lake" {
 # Compute Engine VM for Spark
 resource "google_compute_instance" "spark_instance" {
   name         = "spark-master"
-  machine_type = "n1-standard-2"
+  machine_type = "e2-standard-2"
   zone         = "${var.region}-a"
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-10"
+      image = "debian-cloud/debian-12-bookworm-v20250513"
     }
   }
 

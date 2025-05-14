@@ -34,33 +34,9 @@ tables = {
         "loyalty_program",
         "membership_years",
         "churned",
-        "marital_status",
-        "number_of_children",
-        "education_level",
-        "occupation",
         "customer_zip_code",
         "customer_city",
         "customer_state",
-    ],
-    
-    "customer_behavior": [
-        "customer_id",  # Foreign Key
-        "purchase_frequency",
-        "avg_purchase_value",
-        "online_purchases",
-        "in_store_purchases",
-        "total_returned_items",
-        "total_returned_value",
-        "total_sales",
-        "total_transactions",
-        "total_items_purchased",
-        "total_discounts_received",
-        "customer_support_calls",
-        "email_subscriptions",
-        "app_usage",
-        "website_visits",
-        "social_media_engagement",
-        "days_since_last_purchase"
     ],
     
     "transactions": [
@@ -76,53 +52,8 @@ tables = {
         "transaction_hour",
         "day_of_week",
         "week_of_year",
-        "month_of_year",
-        "avg_items_per_transaction",
-        "avg_transaction_value"
+        "month_of_year"
     ],
-    
-    "products": [
-        "product_id",      # Primary Key
-        "product_name",
-        "product_category",
-        "product_brand",
-        "product_rating",
-        "product_review_count",
-        "product_stock",
-        "product_return_rate",
-        "product_size",
-        "product_weight",
-        "product_color",
-        "product_material",
-        "product_manufacture_date",
-        "product_expiry_date",
-        "product_shelf_life"
-    ],
-    
-    "promotions": [
-        "promotion_id",    # Primary Key
-        "promotion_type",
-        "promotion_start_date",
-        "promotion_end_date",
-        "promotion_effectiveness",
-        "promotion_channel",
-        "promotion_target_audience"
-    ],
-    
-    "stores": [
-        "store_location",  # Primary Key
-        "store_zip_code",
-        "store_city",
-        "store_state",
-        "distance_to_store"
-    ],
-    
-    "time_dimensions": [
-        "transaction_date", # Primary Key
-        "holiday_season",
-        "season",
-        "weekend"
-    ]
 }
 
 # Function to create BigQuery table creation SQL

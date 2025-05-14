@@ -1,0 +1,9 @@
+fastapi
+google-cloud-bigquery
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+python-jose
+passlib
+python-multipart
