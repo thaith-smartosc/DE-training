@@ -22,18 +22,14 @@ def create_spark_session():
     
     return SparkSession.builder \
         .appName("LoyaltyAnalytics") \
-        .config("spark.jars", "jars/spark-3.4-bigquery-0.34.1.jar,jars/gcs-connector-hadoop3-latest.jar,jars/spark-sql-kafka-0-10_2.12-3.4.0.jar") \
+        .config("spark.jars", "jars/spark-3.4-bigquery-0.34.1.jar,jars/gcs-connector-hadoop3-latest.jar,jars/spark-sql-kafka-0-10_2.12-3.4.0.jar,jars/kafka-clients-3.4.0.jar") \
         .config("spark.hadoop.fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem") \
         .config("spark.hadoop.fs.AbstractFileSystem.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS") \
         .config("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
         .config("spark.hadoop.google.cloud.auth.service.account.json.keyfile", credentials_path) \
-        .config("spark.driver.memory", "8g") \
-        .config("spark.executor.memory", "8g") \
         .config("spark.driver.bindAddress", "127.0.0.1") \
         .config("spark.driver.host", "127.0.0.1") \
-        .config("parentProject", "de-sumup") \
-        .config("temporaryGcsBucket", "de-sumup-loyalty-data-lake") \
-        .config("spark.sql.shuffle.partitions", "5") \
+        .config("spark.sql.shuffle.partitions", "1") \
         .getOrCreate()
 
 def define_transaction_schema():
@@ -96,19 +92,19 @@ def process_stream(spark):
     df = spark \
         .readStream \
         .format("kafka") \
-        .option("kafka.bootstrap.servers", "kafka:9092") \
-        .option("subscribe", "loyalty-transactions") \
+        .option("kafka.bootstrap.servers", "localhost:9092") \
+        .option("subscribe", "transactions") \
         .option("startingOffsets", "latest") \
         .load()
 
     # Parse JSON data with schema validation
-    transactions = df.select(
+    raw_transactions = df.select(
         from_json(col("value").cast("string"), define_transaction_schema()).alias("data")
     ).select("data.*") \
     .withWatermark("transaction_date", "1 hour")  # Handle late arriving data
 
     # Enrich with calculated fields
-    transactions = transactions \
+    transactions = raw_transactions \
         .withColumn("processing_timestamp", current_timestamp()) \
         .withColumn("total_amount", col("unit_price") * col("quantity")) \
         .withColumn("net_amount", col("total_amount") - col("discount_applied")) \
@@ -140,13 +136,13 @@ def process_stream(spark):
         batch_df.unpersist()
 
     # Start the streaming query with checkpointing
-    query = transactions \
-        .writeStream \
-        .foreachBatch(process_batch) \
-        .option("checkpointLocation", "gs://de-sumup-loyalty-data-lake/checkpoints/") \
-        .outputMode("update") \
-        .trigger(processingTime="1 minute") \
-        .start()
+    # query = transactions \
+    #     .writeStream \
+    #     .foreachBatch(process_batch) \
+    #     .option("checkpointLocation", "gs://de-sumup-loyalty-data-lake/checkpoints/") \
+    #     .outputMode("update") \
+    #     .trigger(processingTime="1 minute") \
+    #     .start()
 
     # Debug query to console (optional)
     debug_query = transactions \
@@ -156,7 +152,7 @@ def process_stream(spark):
         .start()
 
     # Wait for termination
-    query.awaitTermination()
+    # query.awaitTermination()
     debug_query.awaitTermination()
 
 if __name__ == "__main__":

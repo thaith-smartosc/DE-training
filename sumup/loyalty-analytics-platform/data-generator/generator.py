@@ -21,10 +21,6 @@ class TransactionGenerator:
             self.producer = KafkaProducer(
                 bootstrap_servers=self.bootstrap_servers,
                 value_serializer=lambda x: json.dumps(x).encode('utf-8'),
-                api_version=(2, 8, 1),  # Specify your Kafka version
-                retries=5,
-                request_timeout_ms=30000,
-                max_block_ms=60000
             )
             logger.info(f"Successfully connected to Kafka at {self.bootstrap_servers}")
         except Exception as e:
@@ -96,9 +92,7 @@ class TransactionGenerator:
 if __name__ == "__main__":
     # Try multiple common Kafka ports if localhost:9092 fails
     bootstrap_servers = [
-        'localhost:9092',
-        'kafka:9092',
-        '127.0.0.1:9092'
+        'localhost:9092'
     ]
     
     generator = TransactionGenerator(bootstrap_servers)

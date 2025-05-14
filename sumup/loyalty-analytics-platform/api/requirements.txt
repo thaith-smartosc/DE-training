@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+google-cloud-bigquery
+google-auth
+pandas
+python-multipart
+pydantic
+pydantic-settings
+python-dateutil
+pytz
+numpy
