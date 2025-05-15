@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class TransactionGenerator:
     def __init__(self, bootstrap_servers=['localhost:9092']):
-        self.topic = 'transactions'
+        self.topic = 'raw_1_transactions'
         self.bootstrap_servers = bootstrap_servers
         self.producer = None
         self._initialize_producer()
@@ -34,9 +34,10 @@ class TransactionGenerator:
         store_locations = ['NEW_YORK', 'LOS_ANGELES', 'CHICAGO', 'HOUSTON', 'PHOENIX']
 
         transaction = {
-            'transaction_id': str(random.randint(1000000, 9999999)),
-            'customer_id': str(random.randint(1000, 1000000)),
-            'product_id': str(random.randint(1, 10000)),
+            'transaction_id': random.randint(1000000, 9999999),
+            'customer_id': random.randint(1000, 1000000),
+            # 'customer_id': 12345,
+            'product_id': random.randint(1, 10000),
             'transaction_date': current_time.isoformat(),
             'quantity': random.randint(1, 10),
             'unit_price': round(random.uniform(10, 1000), 2),
@@ -50,12 +51,8 @@ class TransactionGenerator:
         }
         
         # Calculate absolute discount amount
-        transaction['discount_amount'] = round(
+        transaction['discount_applied'] = round(
             transaction['unit_price'] * transaction['discount_percent'] * transaction['quantity'], 
-            2
-        )
-        transaction['net_amount'] = round(
-            (transaction['unit_price'] * transaction['quantity']) - transaction['discount_amount'],
             2
         )
         
@@ -97,6 +94,6 @@ if __name__ == "__main__":
     
     generator = TransactionGenerator(bootstrap_servers)
     try:
-        generator.start_generating(interval=0.5, max_messages=100)
+        generator.start_generating(interval=10, max_messages=100)
     except Exception as e:
         logger.error(f"Application error: {str(e)}")
