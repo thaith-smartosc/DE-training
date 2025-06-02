@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Databricks Certified Data Engineer Professional Practice Exam</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1,
+      h2 {
+        color: #0066cc;
+      }
+      .question {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .options {
+        margin-left: 20px;
+      }
+      .option {
+        margin: 10px 0;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #e8f4f8;
+        border-radius: 5px;
+        display: none;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+      button {
+        background-color: #0066cc;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #0052a3;
+      }
+      .score {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .timer {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #0066cc;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Databricks Certified Data Engineer Professional Practice Exam</h1>
+    <div class="timer" id="timer">Time: 120:00</div>
+
+    <div id="exam">
+      <h2>Instructions</h2>
+      <ul>
+        <li>This practice exam contains 65 multiple-choice questions.</li>
+        <li>You have 2 hours to complete the exam.</li>
+        <li>Select the best answer for each question.</li>
+        <li>Click "Submit Exam" when you're done to see your score.</li>
+      </ul>
+
+      <div id="questions">
+        <!-- Questions will be inserted here by JavaScript -->
+      </div>
+
+      <button onclick="submitExam()">Submit Exam</button>
+    </div>
+
+    <div id="result" class="result">
+      <h2>Exam Results</h2>
+      <div class="score">Score: <span id="score">0</span>/65</div>
+      <div id="answers"></div>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          question:
+            "How can you read parameters using `dbutils.widgets.text` and retrieve their values?",
+          options: [
+            "Use `dbutils.widgets.getValue()`",
+            "Use `dbutils.widgets.get()`",
+            "Use `dbutils.widgets.retrieve()`",
+            "Use `dbutils.widgets.read()`",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How do you provide read access for a production notebook to a new data engineer for review?",
+          options: [
+            'Set the notebook\'s permissions to "Can Run"',
+            'Set the notebook\'s permissions to "Can Edit"',
+            'Set the notebook\'s permissions to "Can Read"',
+            'Set the notebook\'s permissions to "Can Manage"',
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "When attaching a notebook to a cluster, which permission allows you to run the notebook?",
+          options: [
+            '"Can Attach"',
+            '"Can Execute"',
+            '"Can Restart"',
+            '"Can Run"',
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "Should production DLT pipelines be run on a job cluster or an all-purpose cluster?",
+          options: [
+            "All-purpose cluster",
+            "Job cluster",
+            "Either can be used with the same results",
+            "Neither, DLT pipelines use their own dedicated clusters",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Does a CTAS (CREATE TABLE AS SELECT) operation execute the load every time or only during table creation?",
+          options: [
+            "Only during table creation",
+            "Every time the table is accessed",
+            "It depends on the table properties",
+            "It depends on the query optimization settings",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "How can you control access to read production secrets using scope access control?",
+          options: [
+            'Set "Execute" permissions on the scope',
+            'Set "Read" permissions on the scope or secret',
+            'Set "Admin" permissions on the scope',
+            'Set "Write" permissions on the scope',
+          ],
+          correct: 1,
+        },
+        {
+          question: "Where does the `%sh` command run in Databricks?",
+          options: [
+            "On all worker nodes",
+            "On the driver node",
+            "On both driver and worker nodes",
+            "On a separate command node",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "If a query contains a filter, how does Databricks use file statistics in the transaction log?",
+          options: [
+            "It uses file-level min/max statistics to skip files that don't contain relevant data",
+            "It doesn't use file statistics for filtered queries",
+            "It only uses file statistics for partitioned tables",
+            "It only uses file statistics for optimized tables",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "What happens when you run a `VACUUM` command on a shallow clone table?",
+          options: [
+            "It successfully removes files older than the retention period",
+            "It results in an error",
+            "It vacuums the source table instead",
+            "It automatically converts the shallow clone to a deep clone first",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Which type of join is not possible when performing a join between a static DataFrame and a streaming DataFrame?",
+          options: ["Left join", "Inner join", "Right join", "Full outer join"],
+          correct: 2,
+        },
+        {
+          question:
+            "When the source is a CDC (Change Data Capture), what's the best approach for maintaining data consistency?",
+          options: [
+            "Use `INSERT OVERWRITE` for each batch",
+            "Use `MERGE INTO` operations",
+            "Leverage the Change Data Feed (CDF) feature",
+            "Use `COPY INTO` command",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How can you find the difference between the previous and present commit in a Delta table?",
+          options: [
+            "Use `DESCRIBE HISTORY` and compare the versions",
+            "Use Change Data Feed (CDF) to track changes",
+            "Query the table with time travel syntax for both versions",
+            "Use the `DIFF` command between versions",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What is the best approach for nightly jobs that overwrite a table for the business team with the least latency?",
+          options: [
+            "Write directly to the table nightly",
+            "Create a view on top of the underlying data",
+            "Use a materialized view that refreshes nightly",
+            "Create a shallow clone that updates nightly",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What does the `OPTIMIZE TABLE` command do, and what is the target file size?",
+          options: [
+            "Compacts small files and the target file size is 256MB",
+            "Compacts small files and the target file size is 512MB",
+            "Compacts small files and the target file size is 1GB",
+            "Compacts small files and the target file size is 2GB",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "In a streaming scenario, what does the `.withWatermark` function do with a delay of 10 minutes?",
+          options: [
+            "Limits the amount of state maintained by dropping data older than 10 minutes",
+            "Delays processing of all data by 10 minutes",
+            "Sets a timeout for stream processing to 10 minutes",
+            "Batches data into 10-minute windows",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "How does aggregating on the source and then overwriting/appending to the target impact data load?",
+          options: [
+            "It reduces the amount of data transferred over the network",
+            "It increases processing time due to double aggregation",
+            "It has no impact on performance",
+            "It may lead to data inconsistency if not handled properly",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "Why might you receive three email notifications when a job was set to trigger an email if `mean(temp) > 120`?",
+          options: [
+            "The alert was configured incorrectly",
+            "There were three distinct temperature readings above 120",
+            "The job ran three times",
+            "Multiple batches within the same job run triggered the alert",
+          ],
+          correct: 3,
+        },
+        {
+          question:
+            "Why should the checkpoint directory be unique for each stream in a streaming job?",
+          options: [
+            "To prevent data corruption",
+            "To improve performance",
+            "To make debugging easier",
+            "It's not required, streams can share checkpoint directories",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "How would you set up an Autoloader scenario to load data into a bronze table with history and update the target table?",
+          options: [
+            'Use `readStream` with `trigger(once=True)` and write mode "append"',
+            'Use `readStream` with continuous processing and write mode "complete"',
+            "Use `readStream` with `foreachBatch` to handle custom logic",
+            'Use batch processing with `spark.read()` and write mode "overwrite"',
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "How can you handle streaming deduplication based on a unique identifier?",
+          options: [
+            "Use `dropDuplicates()` after reading the stream",
+            "Configure Autoloader with `deduplication` option",
+            "Use `.withWatermark()` and then `dropDuplicates()`",
+            "Create a Delta table with constraints",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "For batch loading, what happens if the load is set to overwrite mode?",
+          options: [
+            "It appends new data to the target table",
+            "It replaces the entire target table with the new data",
+            "It merges the new data with existing data",
+            "It fails if the target table already exists",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "In a Change Data Feed (CDF) scenario, if `readChangeFeed` starts at version 0 and append is used, will there be deduplication?",
+          options: [
+            "Yes, CDF automatically handles deduplication",
+            "No, there will be duplicate records",
+            "Only if explicitly configured with `deduplicate=true`",
+            "Only for tables with a defined primary key",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How can you identify whether a table is SCD Type 1 or 2 based on an upsert operation?",
+          options: [
+            "SCD Type 1 overwrites records, SCD Type 2 maintains history",
+            "SCD Type 1 appends all records, SCD Type 2 merges records",
+            "SCD Type 1 uses a timestamp, SCD Type 2 doesn't",
+            "SCD Type 1 is streaming, SCD Type 2 is batch processing",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "To avoid performance issues in streaming jobs, should you decrease the trigger time?",
+          options: [
+            "Yes, shorter trigger intervals always improve performance",
+            "No, shorter trigger intervals can lead to more frequent small batches",
+            "It depends on the data volume and processing complexity",
+            "Trigger time has no impact on performance",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How does Delta Lake decide on file skipping based on columns in a query?",
+          options: [
+            "It only skips files if all query columns have statistics",
+            "It can skip files if any column in the query has statistics",
+            "It skips files based on the table partitioning strategy",
+            "File skipping is only available for Z-ordered columns",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            'What does granting "Usage" and "Select" permissions on a Delta table allow a user to do?',
+          options: [
+            "Read the table data only",
+            "Read and modify the table data",
+            "Read the table and use its schema in new tables",
+            "Full access to the table including schema modifications",
+          ],
+          correct: 0,
+        },
+        {
+          question: "How do you create an unmanaged table in Databricks?",
+          options: [
+            "Use `CREATE EXTERNAL TABLE`",
+            "Use `CREATE TABLE` with `LOCATION` specified",
+            "Use `CREATE TABLE` without `LOCATION`",
+            "Use `CREATE UNMANAGED TABLE`",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What makes a date column a good candidate for partitioning in a Delta table?",
+          options: [
+            "High cardinality (many unique values)",
+            "Low cardinality (few unique values) with even distribution",
+            "It contains only numeric values",
+            "It contains only string values",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What happens in the transaction log when you rename a Delta table using `ALTER TABLE xx RENAME xx`?",
+          options: [
+            "A new transaction log is created and the old one is deleted",
+            "The table name is updated in the existing transaction log",
+            "A metadata operation is recorded in the transaction log",
+            "The transaction log is not affected by rename operations",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "How would you handle an error with a check constraint violation?",
+          options: [
+            "Disable the constraint temporarily",
+            "Use `INSERT OVERWRITE` to replace all data",
+            "Fix the violation in the source data before loading",
+            "Use exception handling to skip invalid records",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "When using `DESCRIBE` commands, how can you retrieve table properties, comments, and partition details?",
+          options: [
+            "Use `DESCRIBE TABLE`",
+            "Use `DESCRIBE EXTENDED`",
+            "Use `DESCRIBE HISTORY`",
+            "Use `DESCRIBE DETAIL`",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How are file statistics used in Delta Lake, and why are they important?",
+          options: [
+            "They provide record counts only",
+            "They track file modifications for auditing",
+            "They store min/max values for columns to enable data skipping",
+            "They enable parallel processing of files",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "In the Ganglia UI, how can you detect a spill during query execution?",
+          options: [
+            "Look for red warning indicators",
+            'Check the "Spills" tab',
+            "Look for disk I/O spikes and shuffle spill metrics",
+            "Monitor CPU utilization",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "If a repo branch is missing locally, how can you retrieve that branch with the latest code changes?",
+          options: [
+            "Use `git pull origin <branch_name>`",
+            "Use the Databricks UI to clone the repository again",
+            "Use `git fetch` followed by `git checkout <branch_name>`",
+            "Create a new branch with the same name",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "After deleting records with a query like `DELETE FROM A WHERE id IN (SELECT id FROM B)`, can you time travel to see the deleted records?",
+          options: [
+            "No, deleted records are permanently removed",
+            "Yes, using time travel with version numbers or timestamps",
+            "Only if the table has Change Data Feed enabled",
+            "Only if the deletion was part of a transaction",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What are the differences between DBFS and mounts in Databricks?",
+          options: [
+            "DBFS is temporary, mounts are permanent",
+            "DBFS is a filesystem interface, mounts provide access to external storage",
+            "DBFS is for structured data, mounts are for unstructured data",
+            "DBFS is slower, mounts offer better performance",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "If the API `2.0/jobs/create` is executed three times with the same JSON, what will happen?",
+          options: [
+            "It will create one job",
+            "It will create three identical jobs",
+            "It will update the same job three times",
+            "It will return an error after the first execution",
+          ],
+          correct: 1,
+        },
+        {
+          question: "What is DBFS in Databricks?",
+          options: [
+            "Databricks File Storage, a proprietary file format",
+            "Databricks File System, an interface to access various storage systems",
+            "Databricks File Serializer, for optimizing file storage",
+            "Databricks File Service, for file transfer between clusters",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How do you install a Python library using `%pip` in a Databricks notebook?",
+          options: [
+            "`%pip install <library-name>`",
+            "`%pip --install <library-name>`",
+            "`%pip add <library-name>`",
+            "`%pip package install <library-name>`",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "If Task 1 has downstream Task 2 and Task 3 running in parallel, and Task 1 and Task 2 succeed while Task 3 fails, what will be the final job status?",
+          options: ["Success", "Failed", "Partially Completed", "Error"],
+          correct: 1,
+        },
+        {
+          question:
+            "How do you handle streaming job retries in production with job clusters?",
+          options: [
+            "Configure unlimited retries with exponential backoff",
+            "Set a maximum number of retries with a fixed interval",
+            "Use unlimited retries with a maximum of one concurrent run",
+            "Set up a separate monitoring job to restart failed jobs",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "How can you clone an existing job and version it using the Databricks CLI?",
+          options: [
+            "Use `databricks jobs get` followed by `databricks jobs create`",
+            "Use `databricks jobs clone --version`",
+            "Use `databricks jobs export` followed by `databricks jobs import`",
+            "Use `databricks jobs copy --new-version`",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "When converting a large JSON file (1TB) to Parquet with a partition size of 512 MB, what is the correct order of steps?",
+          options: [
+            "Read, repartition (2048 partitions), perform transformations, convert to Parquet",
+            "Read, perform narrow transformations, repartition (2048 partitions), convert to Parquet",
+            "Repartition first, read with partitioned input, transform, convert to Parquet",
+            "Read with adaptive query execution, transform, convert to Parquet",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What happens in the target table when duplicates are dropped during a batch read and append operation?",
+          options: [
+            "Only unique records from the current batch are appended",
+            "All duplicates are removed from both the batch and existing data",
+            "An error is thrown requiring explicit handling",
+            'The operation automatically switches to "merge" behavior',
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "If a column was missed during profiling from Kafka, how can you ensure that the data is fully replayable in the future?",
+          options: [
+            "Recreate the Kafka topic with the correct schema",
+            "Write raw data to a bronze table before transformation",
+            "Add the missing column to all existing data",
+            "Use schema evolution to handle the missing column",
+          ],
+          correct: 1,
+        },
+        {
+          question: "How do you handle access control for users in Databricks?",
+          options: [
+            "Only through workspace permissions",
+            "Using a combination of IAM roles, workspace permissions, and table ACLs",
+            "Exclusively through cluster policies",
+            "Using notebook-level permissions only",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What is the use of the `pyspark.sql.functions.broadcast` function in a Spark job?",
+          options: [
+            "To distribute messages to all executors",
+            "To distribute a small DataFrame to all worker nodes for join optimization",
+            "To convert a streaming DataFrame to a batch DataFrame",
+            "To enable cross-cluster communication",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            'What happens when performing a MERGE INTO with a condition "when not matched, insert *"?',
+          options: [
+            "Records from the source that don't match records in the target are inserted",
+            "All records from the source are inserted regardless of matches",
+            "Records that don't match a condition are filtered out",
+            "An error is thrown for records without matches",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "Given a function for loading bronze data, how would you write a silver load function to transform and update downstream tables?",
+          options: [
+            "Use the same approach but add transformation logic",
+            "Use `writeStream` with `foreachBatch` for incremental processing",
+            "Use batch processing with `MERGE INTO` operations",
+            "Use DLT pipelines with `APPLY CHANGES` syntax",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "If the code includes `CASE WHEN is_member(\"group\") THEN email ELSE 'redacted' END AS email`, what will be the output if the user is not a member of the group?",
+          options: [
+            "NULL",
+            "The user's actual email",
+            '"redacted"',
+            "An empty string",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "How can you use the Ganglia UI to view logs and troubleshoot a Databricks job?",
+          options: [
+            'Access the "Logs" tab in the Ganglia UI',
+            "Ganglia doesn't provide logs, only metrics",
+            'Use the "Events" section in the Ganglia UI',
+            'Access the "Driver Logs" through the Spark UI in Ganglia',
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "When working with multi-task jobs, how do you list or get the tasks using the API?",
+          options: [
+            "Use `2.0/jobs/list` with `include_tasks=true`",
+            "Use `2.0/jobs/tasks/list`",
+            "Use `2.0/jobs/run/list` to get run details including tasks",
+            "Use `2.0/tasks/list` with the job ID",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "What is unit testing in Databricks, and how is it applied?",
+          options: [
+            "Testing individual notebook cells",
+            "Testing full notebooks with different parameters",
+            "Testing individual functions using frameworks like pytest",
+            "Testing APIs using integration tests",
+          ],
+          correct: 2,
+        },
+        {
+          question:
+            "What happens when multiple `display()` commands are executed repeatedly in development, and what is the impact in production?",
+          options: [
+            "Only the last `display()` shows results, with no production impact",
+            "All `display()` commands show results, causing memory issues in production",
+            "In production, `display()` commands are ignored",
+            "In production, `display()` commands write to logs instead of showing results",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            'Will the `option("readChangeFeed")` work on a source Delta table with no Change Data Feed enabled?',
+          options: [
+            "Yes, it will work but only return the latest changes",
+            "No, it will throw an error",
+            "Yes, it will automatically enable CDF on the table",
+            "It will work but only for tables created after DBR 8.0",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "How can you identify whether a tumbling or sliding window is being used based on the code?",
+          options: [
+            "Tumbling windows use `window()`, sliding windows use `slidingWindow()`",
+            "Tumbling windows have equal window and slide duration, sliding windows have slide duration less than window duration",
+            "Tumbling windows use `groupBy().agg()`, sliding windows use `groupByWindow()`",
+            "Tumbling windows are stateless, sliding windows maintain state",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "What performance tuning considerations are involved with `spark.sql.files.maxPartitionBytes` and `spark.sql.shuffle.partitions`?",
+          options: [
+            "`maxPartitionBytes` controls the size of input partitions, `shuffle.partitions` controls the number of shuffle partitions",
+            "Both parameters control the same thing but at different stages",
+            "`maxPartitionBytes` is for reading, `shuffle.partitions` is for writing",
+            "They are only relevant for streaming applications",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "What is the purpose of the `%run` magic command in Databricks?",
+          options: [
+            "To execute shell commands",
+            "To run another notebook",
+            "To install Python packages",
+            "To display markdown content",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Which of the following is NOT a valid way to create a Delta table?",
+          options: [
+            "Using CREATE TABLE with LOCATION",
+            "Using CREATE TABLE AS SELECT",
+            "Using CREATE EXTERNAL TABLE",
+            "Using CREATE DELTA TABLE",
+          ],
+          correct: 3,
+        },
+        {
+          question:
+            "What happens when you use `spark.sql.files.maxPartitionBytes=128MB`?",
+          options: [
+            "It limits the maximum size of input files",
+            "It sets the maximum size of output partitions",
+            "It controls the size of shuffle partitions",
+            "It determines the size of broadcast variables",
+          ],
+          correct: 1,
+        },
+        {
+          question:
+            "Which of the following is true about Delta Lake's time travel feature?",
+          options: [
+            "It only works with partitioned tables",
+            "It requires Change Data Feed to be enabled",
+            "It allows querying previous versions of the table",
+            "It only works with tables created after DBR 8.0",
+          ],
+          correct: 2,
+        },
+        {
+          question: "What is the purpose of the `%fs` magic command?",
+          options: [
+            "To run filesystem operations",
+            "To format SQL queries",
+            "To find files in the workspace",
+            "To fix file permissions",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "Which of the following is NOT a valid way to handle streaming deduplication?",
+          options: [
+            "Using dropDuplicates() with watermark",
+            "Using MERGE INTO operations",
+            "Using Autoloader's deduplication option",
+            "Using GROUP BY with window functions",
+          ],
+          correct: 1,
+        },
+        {
+          question: "What is the purpose of the `%md` magic command?",
+          options: [
+            "To display markdown content",
+            "To modify data",
+            "To manage dependencies",
+            "To monitor metrics",
+          ],
+          correct: 0,
+        },
+        {
+          question:
+            "Which of the following is true about Delta Lake's OPTIMIZE command?",
+          options: [
+            "It only works on partitioned tables",
+            "It requires Change Data Feed to be enabled",
+            "It compacts small files into larger ones",
+            "It only works with tables created after DBR 8.0",
+          ],
+          correct: 2,
+        },
+      ];
+
+      // Timer functionality
+      let timeLeft = 120 * 60; // 2 hours in seconds
+      const timerElement = document.getElementById("timer");
+
+      function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `Time: ${minutes
+          .toString()
+          .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+        if (timeLeft > 0) {
+          timeLeft--;
+          setTimeout(updateTimer, 1000);
+        } else {
+          submitExam();
+        }
+      }
+
+      // Initialize exam
+      function initializeExam() {
+        const questionsContainer = document.getElementById("questions");
+        questions.forEach((q, index) => {
+          const questionDiv = document.createElement("div");
+          questionDiv.className = "question";
+          questionDiv.innerHTML = `
+                    <h3>Question ${index + 1}</h3>
+                    <p>${q.question}</p>
+                    <div class="options">
+                        ${q.options
+                          .map(
+                            (option, i) => `
+                            <div class="option">
+                                <input type="radio" name="q${index}" value="${i}" id="q${index}o${i}">
+                                <label for="q${index}o${i}">${option}</label>
+                            </div>
+                        `
+                          )
+                          .join("")}
+                    </div>
+                `;
+          questionsContainer.appendChild(questionDiv);
+        });
+        updateTimer();
+      }
+
+      // Submit exam
+      function submitExam() {
+        let score = 0;
+        const answers = [];
+
+        questions.forEach((q, index) => {
+          const selected = document.querySelector(
+            `input[name="q${index}"]:checked`
+          );
+          const isCorrect = selected && parseInt(selected.value) === q.correct;
+          if (isCorrect) score++;
+
+          answers.push({
+            question: q.question,
+            selected: selected
+              ? q.options[parseInt(selected.value)]
+              : "Not answered",
+            correct: q.options[q.correct],
+            isCorrect: isCorrect,
+          });
+        });
+
+        document.getElementById("score").textContent = score;
+        const answersDiv = document.getElementById("answers");
+        answersDiv.innerHTML = answers
+          .map(
+            (a, i) => `
+                <div class="question">
+                    <h3>Question ${i + 1}</h3>
+                    <p>${a.question}</p>
+                    <p>Your answer: <span class="${
+                      a.isCorrect ? "correct" : "incorrect"
+                    }">${a.selected}</span></p>
+                    <p>Correct answer: ${a.correct}</p>
+                </div>
+            `
+          )
+          .join("");
+
+        document.getElementById("exam").style.display = "none";
+        document.getElementById("result").style.display = "block";
+      }
+
+      // Start the exam when the page loads
+      window.onload = initializeExam;
+    </script>
+  </body>
+</html>

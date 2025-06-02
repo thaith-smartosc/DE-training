@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Databricks Knowledge Check Exam</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .question {
+        margin-bottom: 25px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .question p {
+        font-weight: bold;
+        margin-top: 0;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      .option {
+        margin: 8px 0;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .results {
+        margin-top: 30px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f0f8ff;
+      }
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+      .multi-note {
+        font-style: italic;
+        color: #666;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Databricks Knowledge Check Exam</h1>
+    <form id="examForm">
+      <!-- Question 1 -->
+      <div class="question">
+        <p>
+          1. Which of the following could be used as sources in a stream
+          processing pipeline?
+        </p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q1" value="A" /> A. change data
+            capture (CDC) feed</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q1" value="B" /> B. Kafka</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q1" value="C" /> C. Delta Lake</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q1" value="D" /> D. IoT devices</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <p>
+          2. Which of the following statements about propagating deletes with
+          change data feed (CDF) are true?
+        </p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q2" value="A" /> A. Deletes cannot be
+            processed at the same time as appends and updates.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q2" value="B" /> B. Commit messages
+            can be specified as part of the write options using the userMetadata
+            option.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q2" value="C" /> C. Deleting data will
+            create new data files rather than deleting existing data
+            files.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q2" value="D" /> D. In order to
+            propagate deletes to a table, a MERGE statement is required in
+            SQL.</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <p>
+          3. Which of the following are considerations to keep in mind when
+          choosing between micro-batch and continuous execution mode?
+        </p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q3" value="A" /> A. Desired
+            latency</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q3" value="B" /> B. Total cost of
+            operation (TCO)</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q3" value="C" /> C. Maximum
+            throughput</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q3" value="D" /> D. Cloud object
+            storage</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <p>
+          4. Which of the following functions completes the following code
+          snippet to return a Spark DataFrame in a structured streaming query?
+        </p>
+        <pre>
+spark.readStream.format("kafka")
+.option("kafka.bootstrap.servers:__)
+.option("subscribe:", 'topic')
+._____</pre
+        >
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q4" value="A" /> A. load()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q4" value="B" /> B. print()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q4" value="C" /> C. return()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q4" value="D" /> D. merge()</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <p>5. In stream processing, datasets are ______.</p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q5" value="A" /> A. continuous and
+            bounded</label
+          >
+          <label class="option"
+            ><input type="radio" name="q5" value="B" /> B. continuous and
+            unbounded</label
+          >
+          <label class="option"
+            ><input type="radio" name="q5" value="C" /> C. micro-batch and
+            unbounded</label
+          >
+          <label class="option"
+            ><input type="radio" name="q5" value="D" /> D. micro-batch and
+            bounded</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question">
+        <p>
+          6. Which of the following is considered a recommended best practice
+          for ingesting streaming data?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q6" value="A" /> A. Use streaming live
+            tables for raw data and streaming tables for bronze, silver, and
+            gold quality data.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q6" value="B" /> B. Use streaming tables
+            for bronze quality data and streaming live tables for silver and
+            gold quality data.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q6" value="C" /> C. Use streaming live
+            tables for bronze quality data and streaming tables for silver and
+            gold quality data.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q6" value="D" /> D. Use streaming tables
+            for raw data and streaming live tables for bronze, silver, and gold
+            quality data.</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question">
+        <p>
+          7. A data engineer has data that needs to be updated. However, they
+          need to have access to a recorded history of the information
+          previously stored in the dataset before the update. Which of the
+          following table types should the data engineer use for their data?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q7" value="A" /> A. Type 0</label
+          >
+          <label class="option"
+            ><input type="radio" name="q7" value="B" /> B. Type 1</label
+          >
+          <label class="option"
+            ><input type="radio" name="q7" value="C" /> C. Type 2</label
+          >
+          <label class="option"
+            ><input type="radio" name="q7" value="D" /> D. Type 1 or Type
+            2</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question">
+        <p>
+          8. Which of the following operations can be performed on stateless
+          tables to limit the state dimension?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q8" value="A" /> A. Stream-stream
+            join</label
+          >
+          <label class="option"
+            ><input type="radio" name="q8" value="B" /> B. Stream-static
+            join</label
+          >
+          <label class="option"
+            ><input type="radio" name="q8" value="C" /> C. Stateful
+            aggregation</label
+          >
+          <label class="option"
+            ><input type="radio" name="q8" value="D" /> D. Drop
+            duplicates</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="question">
+        <p>
+          9. Which of the following statements about fact tables and dimension
+          tables are true?
+        </p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q9" value="A" /> A. Transactional
+            guarantees and Delta Lake ensure that the newest version of a
+            dimension table will be referenced each time a query is processed
+            for incremental workloads.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q9" value="B" /> B. Joined data cannot
+            go unmatched because of Delta Lake's foreign key constraint.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q9" value="C" /> C. Dimension tables
+            contain a granular record of activities, while fact tables contain
+            data that is updated or modified over time.</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q9" value="D" /> D. Modern guidelines
+            suggest de-normalizing dimension and fact tables.</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="question">
+        <p>
+          10. The following line of code is supposed to create a set of inverted
+          rules for a quarantine table. Which of the following correctly fills
+          in the blank?
+        </p>
+        <pre>quarantine_rules = ___</pre>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q10" value="A" /> A. "invalid_record":
+            f"NOT({' AND '.join(rules.values())})"</label
+          >
+          <label class="option"
+            ><input type="radio" name="q10" value="B" /> B. "invalid_record":
+            f"&&({' | '.join(rules.values())})"</label
+          >
+          <label class="option"
+            ><input type="radio" name="q10" value="C" /> C. "invalid_record":
+            f"NOT({' OR '.join(rules.values())})"</label
+          >
+          <label class="option"
+            ><input type="radio" name="q10" value="D" /> D. "invalid_record":
+            f"IF({' NULL '.join(rules.values())})"</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="question">
+        <p>
+          11. Which of the following terms refers to irreversibly altering
+          personal data in such a way that a data subject can no longer be
+          identified directly or indirectly?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q11" value="A" /> A. Tokenization</label
+          >
+          <label class="option"
+            ><input type="radio" name="q11" value="B" /> B.
+            Pseudonymization</label
+          >
+          <label class="option"
+            ><input type="radio" name="q11" value="C" /> C. Anonymization</label
+          >
+          <label class="option"
+            ><input type="radio" name="q11" value="D" /> D. Binning</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="question">
+        <p>
+          12. Which of the following is a regulatory compliance program
+          specifically for Europe?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q12" value="A" /> A. HIPAA</label
+          >
+          <label class="option"
+            ><input type="radio" name="q12" value="B" /> B. PCI-DSS</label
+          >
+          <label class="option"
+            ><input type="radio" name="q12" value="C" /> C. GDPR</label
+          >
+          <label class="option"
+            ><input type="radio" name="q12" value="D" /> D. CCPA</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="question">
+        <p>13. Which of the following are examples of generalization?</p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q13" value="A" /> A. Hashing</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q13" value="B" /> B. Truncating IP
+            addresses</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q13" value="C" /> C. Data
+            suppression</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q13" value="D" /> D. Binning</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="question">
+        <p>
+          14. Which of the following can be used to obscure personal information
+          by outputting a string of randomized characters?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q14" value="A" /> A. Tokenization</label
+          >
+          <label class="option"
+            ><input type="radio" name="q14" value="B" /> B. Categorical
+            generalization</label
+          >
+          <label class="option"
+            ><input type="radio" name="q14" value="C" /> C. Binning</label
+          >
+          <label class="option"
+            ><input type="radio" name="q14" value="D" /> D. Hashing</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="question">
+        <p>15. Change feed can be read by which of the following?</p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q15" value="A" /> A. Version</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q15" value="B" /> B. Date
+            modified</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q15" value="C" /> C. Timestamp</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q15" value="D" /> D. Size</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 16 -->
+      <div class="question">
+        <p>
+          16. Which of the following is an example of how to get a configuration
+          variable in a DLT pipeline?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q16" value="A" /> A. spark.get()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q16" value="B" /> B.
+            spark.conf.get()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q16" value="C" /> C. @dlt.get()</label
+          >
+          <label class="option"
+            ><input type="radio" name="q16" value="D" /> D.
+            @dlt.spark.conf.get()</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 17 -->
+      <div class="question">
+        <p>
+          17. A data engineer needs to apply a common set of data quality rules
+          to multiple tables. Which of the following best practices can they
+          follow to do this?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q17" value="A" /> A. Maintain data
+            quality rules separately from the pipeline.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q17" value="B" /> B. Create a separate
+            pipeline containing the data quality rules and run it concurrently
+            with the pipeline.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q17" value="C" /> C. Tag the dataset used
+            to populate the tables in the pipeline with data.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q17" value="D" /> D. Create a task in
+            Workflows for data quality rules and make it a dependency.</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 18 -->
+      <div class="question">
+        <p>
+          18. A data engineer has created a pipeline that implements unit tests
+          and has run this pipeline after pushing changes to the repo. Which of
+          the following steps does the data engineer need to take in order to
+          create a complete Workflow?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q18" value="A" /> A. They need to
+            anonymize any sensitive information in their pipeline.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q18" value="B" /> B. They need to run the
+            implementation test when code is moved to a staging
+            environment.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q18" value="C" /> C. They need to create
+            data quality constraints to prevent bad records from entering the
+            production table.</label
+          >
+          <label class="option"
+            ><input type="radio" name="q18" value="D" /> D. They need to
+            modularize their code to make it more reusable.</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 19 -->
+      <div class="question">
+        <p>
+          19. A data engineer wants to create a single refined table out of raw
+          data from several streaming sources. Which of the following data
+          ingestion patterns can be used to complete this task?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q19" value="A" /> A. Sequence</label
+          >
+          <label class="option"
+            ><input type="radio" name="q19" value="B" /> B. Filter</label
+          >
+          <label class="option"
+            ><input type="radio" name="q19" value="C" /> C. Fan-out</label
+          >
+          <label class="option"
+            ><input type="radio" name="q19" value="D" /> D. Funnel</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 20 -->
+      <div class="question">
+        <p>
+          20. Which of the following components of a job are associated with
+          viewing run history and debugging?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q20" value="A" /> A. Task</label
+          >
+          <label class="option"
+            ><input type="radio" name="q20" value="B" /> B. Monitor</label
+          >
+          <label class="option"
+            ><input type="radio" name="q20" value="C" /> C. Cluster</label
+          >
+          <label class="option"
+            ><input type="radio" name="q20" value="D" /> D. Schedule</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 21 -->
+      <div class="question">
+        <p>
+          21. In what order do the following commands need to be run in order to
+          install and configure the Databricks CLI in the Databricks workspace
+          at the location stored in the variable path?
+        </p>
+        <ol>
+          <li>databricks configure -token</li>
+          <li>pip install databricks-cli</li>
+          <li>databricks workspace ls $path</li>
+        </ol>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q21" value="A" /> A. 3, 2, 1</label
+          >
+          <label class="option"
+            ><input type="radio" name="q21" value="B" /> B. 1, 3, 2</label
+          >
+          <label class="option"
+            ><input type="radio" name="q21" value="C" /> C. 2, 1, 3</label
+          >
+          <label class="option"
+            ><input type="radio" name="q21" value="D" /> D. 2, 3, 1</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 22 -->
+      <div class="question">
+        <p>
+          22. Which of the following APIs are used only by administrators to
+          manage account users and groups?
+        </p>
+        <div class="options">
+          <label class="option"
+            ><input type="radio" name="q22" value="A" /> A. Jobs API, Clusters
+            API, DBFS API</label
+          >
+          <label class="option"
+            ><input type="radio" name="q22" value="B" /> B. Workspace API,
+            Libraries API, Tokens API</label
+          >
+          <label class="option"
+            ><input type="radio" name="q22" value="C" /> C. Account API, Groups
+            API, SCIM API</label
+          >
+          <label class="option"
+            ><input type="radio" name="q22" value="D" /> D. Cluster Policies
+            API, Instance Pools API, Global Init Scripts API, Instance Profiles
+            API</label
+          >
+        </div>
+      </div>
+
+      <!-- Question 23 -->
+      <div class="question">
+        <p>
+          23. Which of the following features are available with Databricks
+          Terraform Integration?
+        </p>
+        <span class="multi-note">(Select two responses)</span>
+        <div class="options">
+          <label class="option"
+            ><input type="checkbox" name="q23" value="A" /> A. Management of
+            Databricks workspaces and associated cloud infrastructure</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q23" value="B" /> B. Generation of
+            personal access tokens (PATs) for service principals</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q23" value="C" /> C. Support for
+            automated deployment and management</label
+          >
+          <label class="option"
+            ><input type="checkbox" name="q23" value="D" /> D. Support for all
+            account-level administrator tasks</label
+          >
+        </div>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit Exam</button>
+    </form>
+
+    <div id="results" class="results" style="display: none">
+      <h2>Results</h2>
+      <div id="score"></div>
+      <div id="answers"></div>
+    </div>
+
+    <script>
+      // Correct answers
+      const correctAnswers = {
+        q1: ["A", "D"],
+        q2: ["B", "C"],
+        q3: ["A", "B"],
+        q4: "A",
+        q5: "B",
+        q6: "B",
+        q7: "C",
+        q8: "B",
+        q9: ["A", "D"],
+        q10: "A",
+        q11: "C",
+        q12: "C",
+        q13: ["B", "D"],
+        q14: "D",
+        q15: ["A", "C"],
+        q16: "B",
+        q17: "A",
+        q18: "B",
+        q19: "D",
+        q20: "B",
+        q21: "C",
+        q22: "C",
+        q23: ["A", "C"],
+      };
+
+      function checkAnswers() {
+        let score = 0;
+        let totalQuestions = Object.keys(correctAnswers).length;
+        let resultsHTML = "";
+
+        // Check each question
+        for (let q in correctAnswers) {
+          const userAnswers = getUserAnswers(q);
+          const isCorrect = compareAnswers(userAnswers, correctAnswers[q]);
+
+          if (isCorrect) {
+            score++;
+            resultsHTML += `<p class="correct">Question ${q.substring(
+              1
+            )}: Correct!</p>`;
+          } else {
+            resultsHTML += `<p class="incorrect">Question ${q.substring(
+              1
+            )}: Incorrect. Correct answer(s): ${formatAnswers(
+              correctAnswers[q]
+            )}</p>`;
+          }
+        }
+
+        // Display results
+        document.getElementById(
+          "score"
+        ).innerHTML = `<h3>You scored ${score} out of ${totalQuestions} (${Math.round(
+          (score / totalQuestions) * 100
+        )}%)</h3>`;
+        document.getElementById("answers").innerHTML = resultsHTML;
+        document.getElementById("results").style.display = "block";
+
+        // Scroll to results
+        document
+          .getElementById("results")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      function getUserAnswers(questionName) {
+        const inputs = document.querySelectorAll(
+          `input[name="${questionName}"]:checked`
+        );
+        const answers = [];
+
+        inputs.forEach((input) => {
+          answers.push(input.value);
+        });
+
+        return answers;
+      }
+
+      function compareAnswers(userAnswers, correctAnswers) {
+        if (Array.isArray(correctAnswers)) {
+          // Multiple choice question
+          if (userAnswers.length !== correctAnswers.length) return false;
+
+          const sortedUser = userAnswers.slice().sort();
+          const sortedCorrect = correctAnswers.slice().sort();
+
+          for (let i = 0; i < sortedUser.length; i++) {
+            if (sortedUser[i] !== sortedCorrect[i]) return false;
+          }
+
+          return true;
+        } else {
+          // Single choice question
+          return userAnswers.length === 1 && userAnswers[0] === correctAnswers;
+        }
+      }
+
+      function formatAnswers(answers) {
+        if (Array.isArray(answers)) {
+          return answers.join(", ");
+        } else {
+          return answers;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -38,7 +38,7 @@ def create_spark_session():
         .config("spark.hadoop.google.cloud.auth.service.account.json.keyfile", credentials_path) \
         .config("spark.driver.bindAddress", "127.0.0.1") \
         .config("spark.driver.host", "127.0.0.1") \
-        .config("spark.sql.shuffle.partitions", "4") \
+        .config("spark.sql.shuffle.partitions", "1") \
         .getOrCreate()
 
 def define_transaction_schema():
@@ -231,8 +231,9 @@ def process_stream(spark):
         .readStream \
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("subscribe", "raw_1_transactions") \
+        .option("subscribe", "transactions") \
         .option("startingOffsets", "latest") \
+        .option("failOnDataLoss", "false") \
         .load()
 
     # Parse JSON data with schema validation
